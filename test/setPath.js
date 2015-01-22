@@ -1,6 +1,6 @@
 var assert = require('assert');
 var _ = require('lodash');
-var utils = require('../utils');
+var utils = require('../lib/utils');
 var setPath = utils.setPath;
 
 var rootcases = {

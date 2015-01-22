@@ -1,2 +1,2 @@
-var Router = module.exports = require('./router');
-Router.Route = require('./route');
+exports.Router = require('./lib/router');
+exports.Route = require('./lib/route');
