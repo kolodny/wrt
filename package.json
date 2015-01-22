@@ -1,0 +1,25 @@
+{
+  "name": "wrt",
+  "version": "0.0.0",
+  "description": "a simple react router",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:kolodny/wrt.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Moshe Kolodny",
+  "license": "MIT",
+  "devDependencies": {
+    "lodash": "^2.4.1",
+    "mocha": "^2.1.0"
+  }
+}
