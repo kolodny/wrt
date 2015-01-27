@@ -33,29 +33,29 @@ describe('A basic hash router', function() {
       });
     });
 
-    // describe('when the location is "http://www.google.com/#/sub"', function() {
-    //   var routerElement;
-    //   var router;
+    describe('when the location is "http://www.google.com/#/sub"', function() {
+      var routerElement;
+      var router;
 
-    //   beforeEach(function() {
-    //     routerElement = (
-    //       <Router root="#/" location={{href:'http://www.google.com/#/sub'}}>
-    //         <Route path="/" handler={function() { return <h1>Root</h1>; }} />
-    //         <Route path="/sub" handler={function() { return <h2>Sub</h2>; }} />
-    //       </Router>
-    //     );
-    //     router = React.render(routerElement, document.body);
-    //   });
+      beforeEach(function() {
+        routerElement = (
+          <Router root="#/" location={{href:'http://www.google.com/#/sub'}}>
+            <Route path="/" handler={function() { return <h1>Root</h1>; }} />
+            <Route path="/sub" handler={function() { return <h2>Sub</h2>; }} />
+          </Router>
+        );
+        router = React.render(routerElement, document.body);
+      });
 
-    //   afterEach(function(done) {
-    //     React.unmountComponentAtNode(document.body);
-    //     setTimeout(done);
-    //   });
+      afterEach(function(done) {
+        React.unmountComponentAtNode(document.body);
+        setTimeout(done);
+      });
 
-    //   it('should default to the root route', function() {
-    //     assert.equal(router.getDOMNode().textContent, 'Sub');
-    //   });
-    // });
+      it('should default to the root route', function() {
+        assert.equal(router.getDOMNode().textContent, 'Sub');
+      });
+    });
 
   });
 
