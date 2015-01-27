@@ -7,7 +7,22 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "npm run test-server && npm run test-client",
+    "test-client": "mochify --require 6to5/register --reporter=spec",
+    "test-server": "mocha --require 6to5/register"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "reactify",
+        {
+          "es6": true
+        }
+      ]
+    ]
+  },
+  "browser": {
+    "jsdom": false
   },
   "repository": {
     "type": "git",
@@ -19,7 +34,14 @@
   "author": "Moshe Kolodny",
   "license": "MIT",
   "devDependencies": {
+    "6to5": "^2.13.7",
+    "jsdom": "^3.0.3",
     "lodash": "^2.4.1",
-    "mocha": "^2.1.0"
+    "mocha": "^2.1.0",
+    "mochify": "^2.2.0",
+    "reactify": "^1.0.0"
+  },
+  "dependencies": {
+    "react": "^0.12.2"
   }
 }
