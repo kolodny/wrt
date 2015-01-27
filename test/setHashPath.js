@@ -1,3 +1,4 @@
+require('../test-setup');
 var assert = require('assert');
 var _ = require('lodash');
 var utils = require('../lib/utils');
