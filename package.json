@@ -1,6 +1,6 @@
 {
   "name": "wrt",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "a simple react router",
   "main": "index.js",
   "directories": {
@@ -25,13 +25,14 @@
   "browser": {
     "jsdom": false
   },
-  "repository": {
+"repository": {
     "type": "git",
-    "url": "git@bitbucket.org:kolodny/wrt.git"
+    "url": "git://github.com/kolodny/wrt.git"
   },
-  "keywords": [
-    "react"
-  ],
+  "bugs": {
+    "url": "https://github.com/kolodny/wrt/issues"
+  },
+  "homepage": "https://github.com/kolodny/wrt",
   "author": "Moshe Kolodny",
   "license": "MIT",
   "devDependencies": {
