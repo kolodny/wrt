@@ -3,7 +3,7 @@ wrt
 
 A simple React router
 
-[![Build Status](https://travis-ci.org/kolodny/co-phantom.svg?branch=master)](https://travis-ci.org/kolodny/co-phantom)
+[![Build Status](https://travis-ci.org/kolodny/wrt.svg?branch=master)](https://travis-ci.org/kolodny/wrt)
 
 usage:
 
