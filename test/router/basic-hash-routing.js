@@ -1,7 +1,7 @@
-require('../test-setup');
+require('../../test-setup');
 var assert = require('assert');
 var React = require('react');
-var wrt = require('..');
+var wrt = require('../..');
 
 var Router = wrt.Router;
 var Route = wrt.Route;
@@ -31,6 +31,13 @@ describe('A basic hash router', function() {
       it('should default to the root route', function() {
         assert.equal(router.getDOMNode().textContent, 'Root');
       });
+
+      it('should change routes when the location changes', function() {
+        var newLocation = { href: 'http://www.google.com/#/sub' };
+        router.setState({location: newLocation});
+        assert.equal(router.getDOMNode().textContent, 'Sub');
+      });
+
     });
 
     describe('when the location is "http://www.google.com/#/sub"', function() {
@@ -52,9 +59,16 @@ describe('A basic hash router', function() {
         setTimeout(done);
       });
 
-      it('should default to the root route', function() {
+      it('should go to the sub route', function() {
         assert.equal(router.getDOMNode().textContent, 'Sub');
       });
+
+      it('should change routes when the location changes', function() {
+        var newLocation = { href: 'http://www.google.com/#/' };
+        router.setState({location: newLocation});
+        assert.equal(router.getDOMNode().textContent, 'Root');
+      });
+
     });
 
   });

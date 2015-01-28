@@ -8,8 +8,9 @@
   },
   "scripts": {
     "test": "npm run test-server && npm run test-client",
-    "test-client": "mochify --require 6to5/register --reporter=spec",
-    "test-server": "mocha --require 6to5/register"
+    "test-client": "mochify ./test/**/*.js --require=6to5/register --reporter=spec",
+    "test-server": "mocha   ./test/**/*.js --require=6to5/register",
+    "debug": "      mocha   ./test/**/*.js --require=6to5/register --debug-brk"
   },
   "browserify": {
     "transform": [
