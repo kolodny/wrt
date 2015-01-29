@@ -104,13 +104,11 @@ var RightbarRouter = (
 );
 ```
 
-Do you need it? Probably not. Why did I make it? because it was fun and it's 3 lines of code
+Do you need it? Probably not. Why did I make it? [Because it was fun and it's 3 lines of code](http://i.imgur.com/64F2Pcz.png)
 
 ---
 
-### Some Recipes:
-
-Soon
+check out [recipes](recipes) for some ways to use `wrt` or [check out the demo](kolodny.github.io/wrt/demo)
 
 ---
 
