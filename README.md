@@ -26,7 +26,7 @@ React.render(
 
 ---
 
-### This project is nowhere near ready and this readme is just a spot for me to flesh out ideas and features. Receipes are at the bottom
+### This project is nowhere near ready and this readme is just a spot for me to flesh out ideas and features. [Check out the demos](kolodny.github.io/wrt/demo)
 
 ---
 
@@ -105,10 +105,6 @@ var RightbarRouter = (
 ```
 
 Do you need it? Probably not. Why did I make it? [Because it was fun and it's 3 lines of code](http://i.imgur.com/64F2Pcz.png)
-
----
-
-check out [recipes](recipes) for some ways to use `wrt` or [check out the demo](kolodny.github.io/wrt/demo)
 
 ---
 
