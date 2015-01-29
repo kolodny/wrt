@@ -26,7 +26,7 @@ React.render(
 
 ---
 
-### This project is nowhere near ready and this readme is just a spot for me to flesh out ideas and features. [Check out the demos](kolodny.github.io/wrt/demo)
+### This project is nowhere near ready and this readme is just a spot for me to flesh out ideas and features. [Check out the demos](http://kolodny.github.io/wrt/demo/)
 
 ---
 
