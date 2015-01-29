@@ -29,7 +29,7 @@ var editUser = React.createClass({
   render: function() {
     return (
       <div>
-        <p>You are editing user {this.props.user}</p>
+        <p>You are editing user {this.props.userId}</p>
         <a href="#" onClick={this.props.linkTo('root')}>Go home</a>
       </div>
     );
