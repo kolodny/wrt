@@ -12,11 +12,18 @@ var Index = React.createClass({
         {
           [15, 16, 17].map(userId => {
             return (
-              <p>
-                <a href="#" onClick={ this.props.linkTo('editUser', {userId: userId}) }>
-                  Edit user {userId}
-                </a>
-              </p>
+              <div>
+                <p>
+                  <a href="#" onClick={ this.props.linkTo('editUser', {userId: userId}) }>
+                    Edit user {userId}
+                  </a>
+                </p>
+                <p>
+                  <a href="#" onClick={ this.props.linkTo('editUserAddress', {userId: userId, addressId: 3}) }>
+                    Edit user {userId}'s Address
+                  </a>
+                </p>
+              </div>
             );
           })
         }
@@ -25,7 +32,7 @@ var Index = React.createClass({
   }
 });
 
-var editUser = React.createClass({
+var EditUser = React.createClass({
   render: function() {
     return (
       <div>
@@ -36,10 +43,22 @@ var editUser = React.createClass({
   }
 });
 
+var EditUserAddress = React.createClass({
+  render: function() {
+    return (
+      <div>
+        <p>You are editing user {this.props.userId}, address {this.props.addressId}</p>
+        <a href="#" onClick={this.props.linkTo('root')}>Go home</a>
+      </div>
+    );
+  }
+});
+
 React.render(
   <Router root="#/">
     <Route name="root" path="/" handler={Index} />
-    <Route name="editUser" path="/edit/:userId" handler={editUser} />
+    <Route name="editUser" path="/edit/:userId" handler={EditUser} />
+    <Route name="editUserAddress" path="/edit/:userId/address/:addressId" handler={EditUserAddress} />
   </Router>,
   document.body
 );
