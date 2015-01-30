@@ -6,8 +6,6 @@ var wrt = require('../..');
 var Router = wrt.Router;
 var Route = wrt.Route;
 
-var theGlobal = Function('return this')() || (42, eval)('this');
-
 describe('A basic hash router', function() {
   describe('when embedded directly on the DOM', function() {
 
@@ -74,13 +72,13 @@ describe('A basic hash router', function() {
     });
 
     describe('when the location is the global `location`', function() {
-      var oldAddEventListener = theGlobal.addEventListener;
+      var oldAddEventListener = global.addEventListener;
       var calledInfo;
       var routerElement;
       var router;
       beforeEach(function() {
-        if (!theGlobal.location) {
-          theGlobal.location = { href: 'http://www.google.com/#/' };
+        if (!global.location) {
+          global.location = { href: 'http://www.google.com/#/' };
         }
         calledInfo = { called: 0 };
         global.onhashchange = null;
@@ -97,7 +95,7 @@ describe('A basic hash router', function() {
       });
 
       afterEach(function(done) {
-        theGlobal.addEventListener = oldAddEventListener;
+        global.addEventListener = oldAddEventListener;
         React.unmountComponentAtNode(document.body);
         setTimeout(done);
       });
