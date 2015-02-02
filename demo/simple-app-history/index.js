@@ -55,7 +55,7 @@ var EditUserAddress = React.createClass({
 });
 
 React.render(
-  <Router root="/simple-app-history/">
+  <Router root={location.pathname}>
     <Route name="root" path="/" handler={Index} />
     <Route name="editUser" path="/edit/:userId" handler={EditUser} />
     <Route name="editUserAddress" path="/edit/:userId/address/:addressId" handler={EditUserAddress} />
